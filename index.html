@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GURDIAX – Discord-Bot gegen Beleidigungen, Spam und Raids</title>
+  <meta name="description" content="GURDIAX schützt deinen Discord-Server vor Beleidigungen, Spam und Raids und verwaltet Support-Tickets.">
+  <meta name="theme-color" content="#0e0e11">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%A1%EF%B8%8F%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#inhalt">Zum Inhalt springen</a>
+
+  <div class="wrap">
+    <header class="top">
+      <a class="mark" href="#">GURDIAX</a>
+      <nav aria-label="Hauptmenü">
+        <a href="#funktionen">Funktionen</a>
+        <a href="#befehle">Befehle</a>
+        <a href="#start">Loslegen</a>
+      </nav>
+    </header>
+
+    <main id="inhalt">
+      <!-- ── Hero ── -->
+      <div class="hero">
+        <div>
+          <h1>Dein Server bleibt sauber und sicher.</h1>
+          <p class="lead">GURDIAX löscht Beleidigungen, stoppt Spam und Raids und verwaltet Support-Tickets. Alles in einem Bot, mit eigenen Einstellungen für jeden Server.</p>
+          <div class="actions">
+            <a class="btn btn-primary" data-invite href="#start">Bot einladen</a>
+            <a class="btn btn-ghost" href="#funktionen">Funktionen ansehen</a>
+          </div>
+        </div>
+
+        <!-- Nachbau von zwei echten Bot-Nachrichten -->
+        <div class="stage" aria-hidden="true">
+          <div class="led led-ignite mock">
+            <h2>SUPPORT</h2>
+            <p><small>Ticket erstellen</small>Für ein neues Anliegen.</p>
+            <p><small>Nachfrage zu Ticket</small>Für Rückfragen zu einem Ticket der letzten 24 Stunden (ID nötig).</p>
+            <div class="fakebtns">
+              <span class="fakebtn red">🎫 Ticket erstellen</span>
+              <span class="fakebtn grey">🔍 Nachfrage zu Ticket</span>
+            </div>
+          </div>
+          <div class="embed small">
+            <b>🚨 RAID ERKANNT</b><br>
+            7 Beitritte in 10 Sekunden. Schutzmodus für 5 Minuten aktiv, neue Mitglieder werden abgewiesen.
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Funktionen ── -->
+      <section id="funktionen">
+        <h2 class="sec">Was GURDIAX für deinen Server tut</h2>
+        <p class="sub">Jede Funktion lässt sich pro Server ein- und ausschalten und anpassen.</p>
+        <div class="stack">
+          <article class="embed">
+            <h3>Automod</h3>
+            <p>Löscht Schimpfwörter, Links und Nachrichten in Großbuchstaben. Wortliste, erlaubte Domains und ausgenommene Rollen legst du selbst fest. Admins sind immer ausgenommen.</p>
+          </article>
+          <article class="embed">
+            <h3>Spam- und Raid-Schutz</h3>
+            <p>Stoppt Nachrichtenfluten und Massen-Erwähnungen mit einem Timeout. Treten viele Leute auf einmal bei, schaltet GURDIAX den Schutzmodus ein und weist neue Mitglieder ab.</p>
+          </article>
+          <article class="embed">
+            <h3>Tickets mit Nachfrage-ID</h3>
+            <p>Mitglieder öffnen per Button ein privates Ticket und bekommen eine vierstellige ID. Mit dieser ID eröffnen sie später eine Nachfrage, die den ursprünglichen Grund übernimmt. Wie lange das möglich ist, stellst du ein (Standard: 24 Stunden).</p>
+          </article>
+          <article class="embed">
+            <h3>Logs und Transcripts</h3>
+            <p>Gelöschte und bearbeitete Nachrichten, Beitritte, Austritte und alle Moderationsaktionen landen in einem privaten Log-Kanal. Geschlossene Tickets speichert GURDIAX dort als Textdatei.</p>
+          </article>
+          <article class="embed">
+            <h3>Verwarnungen</h3>
+            <p>Mit <code>/warn</code> sammelst du Verwarnungen pro Mitglied. Ab einer Anzahl, die du festlegst, folgt automatisch ein Timeout.</p>
+          </article>
+          <article class="embed">
+            <h3>Verifizierung</h3>
+            <p>Neue Mitglieder lösen per Button eine kleine Rechenaufgabe und bekommen danach die Verifizierungs-Rolle. Das hält einfache Bots draußen.</p>
+          </article>
+          <article class="embed">
+            <h3>Einstellungen pro Server</h3>
+            <p>Mit <code>/config</code> passt du alles direkt in Discord an. Ein Dashboard im Browser ist in Arbeit.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ── Befehle ── -->
+      <section id="befehle">
+        <h2 class="sec">Befehle</h2>
+        <p class="sub">Die meisten Befehle sind nur für Administratoren sichtbar.</p>
+        <div class="led cmds">
+          <h3>Einstellungen</h3>
+          <dl>
+            <dt><code>/config show</code></dt><dd>Zeigt alle Einstellungen des Servers.</dd>
+            <dt><code>/config modul</code></dt><dd>Schaltet Funktionen an oder aus.</dd>
+            <dt><code>/config zahl</code></dt><dd>Ändert Grenzen und Dauern, zum Beispiel das Spam-Limit.</dd>
+            <dt><code>/config kanal</code></dt><dd>Legt Mod-Log, Ticket-Log und Willkommenskanal fest.</dd>
+            <dt><code>/config rolle</code></dt><dd>Legt Support-Rolle und Verifizierungs-Rolle fest.</dd>
+            <dt><code>/config woerter</code></dt><dd>Verwaltet die Schimpfwort-Liste.</dd>
+            <dt><code>/config domains</code></dt><dd>Verwaltet erlaubte Link-Domains.</dd>
+            <dt><code>/config reset</code></dt><dd>Setzt alle Einstellungen auf den Standard zurück.</dd>
+          </dl>
+          <h3>Moderation</h3>
+          <dl>
+            <dt><code>/warn</code></dt><dd>Verwarnt ein Mitglied. Mit <code>/warns</code> siehst du die Liste, mit <code>/clearwarns</code> löschst du sie.</dd>
+            <dt><code>/timeout</code></dt><dd>Schaltet ein Mitglied stumm. Mit <code>/unmute</code> hebst du das auf.</dd>
+            <dt><code>/kick</code></dt><dd>Wirft ein Mitglied vom Server.</dd>
+            <dt><code>/ban</code></dt><dd>Sperrt ein Mitglied dauerhaft.</dd>
+            <dt><code>/clear</code></dt><dd>Löscht bis zu 100 Nachrichten.</dd>
+            <dt><code>/lock</code></dt><dd>Sperrt einen Kanal. Mit <code>/unlock</code> gibst du ihn wieder frei.</dd>
+            <dt><code>/slowmode</code></dt><dd>Setzt den Slowmode eines Kanals.</dd>
+            <dt><code>/raidmode</code></dt><dd>Schaltet den Schutzmodus von Hand an oder aus.</dd>
+          </dl>
+          <h3>Tickets, Verifizierung und Infos</h3>
+          <dl>
+            <dt><code>/setup-ticket</code></dt><dd>Erstellt das Ticket-Panel im aktuellen Kanal.</dd>
+            <dt><code>/close</code></dt><dd>Schließt ein Ticket mit Grund und speichert das Transcript.</dd>
+            <dt><code>/setup-verify</code></dt><dd>Erstellt das Verifizierungs-Panel im aktuellen Kanal.</dd>
+            <dt><code>/serverinfo</code></dt><dd>Zeigt Infos zum Server. <code>/userinfo</code> zeigt Infos zu einem Mitglied.</dd>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ── Loslegen ── -->
+      <section id="start">
+        <h2 class="sec">In vier Schritten startklar</h2>
+        <p class="sub">Du brauchst auf deinem Server das Recht „Server verwalten“.</p>
+        <ol class="steps">
+          <li>
+            <b>Bot einladen</b>
+            <span>Klicke auf „Bot einladen“ und wähle deinen Server. GURDIAX braucht Rechte zum Verwalten von Kanälen und Rollen, zum Löschen von Nachrichten und zum Stummschalten, Kicken und Bannen.</span>
+            <p style="margin:.8rem 0 0"><a class="btn btn-primary" data-invite href="#start">Bot einladen</a></p>
+          </li>
+          <li>
+            <b>Bot-Rolle nach oben schieben</b>
+            <span>Ziehe die Rolle von GURDIAX in den Servereinstellungen über alle Rollen, die er moderieren soll. Sonst kann er niemanden stummschalten oder kicken.</span>
+          </li>
+          <li>
+            <b>Panels erstellen</b>
+            <span>Schreibe <code>/setup-ticket</code> in den Kanal für den Support und <code>/setup-verify</code> in den Kanal für neue Mitglieder.</span>
+          </li>
+          <li>
+            <b>Einstellungen prüfen</b>
+            <span>Mit <code>/config show</code> siehst du alle Werte. Passe Wortliste, Support-Rolle und Log-Kanäle an deinen Server an.</span>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      <div class="row">
+        <span>GURDIAX ist kein offizielles Produkt von Discord.</span>
+        <nav aria-label="Rechtliches">
+          <a href="datenschutz.html">Datenschutz</a>
+          <a href="impressum.html">Impressum</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Trage hier die Anwendungs-ID deines Bots ein
+    // (Discord Developer Portal → deine Anwendung → General Information → Application ID).
+    // Solange das Feld leer ist, zeigen die Buttons "Bald verfügbar".
+    const CLIENT_ID = "";
+    // Rechte: Kanäle und Rollen verwalten, Nachrichten verwalten, Kicken, Bannen, Mitglieder stummschalten,
+    // Kanäle sehen, Nachrichten senden, Links einbetten, Dateien anhängen, Verlauf lesen.
+    const PERMISSIONS = "1099780189206";
+
+    document.querySelectorAll("[data-invite]").forEach(function (a) {
+      if (!CLIENT_ID) {
+        a.textContent = "Bald verfügbar";
+        a.setAttribute("aria-disabled", "true");
+        a.removeAttribute("href");
+        return;
+      }
+      a.href = "https://discord.com/oauth2/authorize?client_id=" + encodeURIComponent(CLIENT_ID) +
+        "&permissions=" + PERMISSIONS + "&scope=bot%20applications.commands";
+    });
+  </script>
+</body>
+</html>
